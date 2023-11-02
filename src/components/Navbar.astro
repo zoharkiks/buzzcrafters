@@ -1,28 +1,37 @@
 ---
 import Button from "./Button.astro";
 import Card from "./Card.astro";
-
 ---
 
-
-
-
 <header>
-    <nav class="bg-green-500 flex justify-between items-center">   
-        <div class="">
-            Logo
-        </div>
-    
-        <ul class="flex">
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link</li>
-            <li>Link </li>
-            <li>Link</li>
-        </ul>
-    
-        <Button>CTA</Button>
-    </nav>
+  <nav class="flex justify-between items-center text-text-primary padding">
+    <div class="flex items-center space-x-1">
+      <iconify-icon
+        width="40"
+        icon="solar:file-bold-duotone"
+        class="text-accent-primary"></iconify-icon>
 
+      <span class="font-medium text-lg">buzzCrafters</span>
+    </div>
+
+    <ul class="md:flex hidden order-first space-x-8">
+      <li>About Us</li>
+      <li>Project</li>
+      <li>Service</li>
+    </ul>
+
+    <div class="hidden md:flex space-x-4">
+      <span>Log In</span>
+      <Button>Sign Up</Button>
+    </div>
+
+    <div
+      class="md:hidden rounded-full flex justify-center items-center bg-text-primary p-1"
+    >
+      <iconify-icon
+        width="30"
+        icon="solar:menu-dots-bold-duotone"
+        class="text-accent-primary"></iconify-icon>
+    </div>
+  </nav>
 </header>
-
