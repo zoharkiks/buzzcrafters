@@ -4,7 +4,7 @@ import Card from "./Card.astro";
 ---
 
 <header>
-  <nav class="flex justify-between items-center text-text-primary padding">
+  <nav class="flex justify-between items-center text-text-primary padding text-sm lg:text-base">
     <div class="flex items-center space-x-1">
       <iconify-icon
         width="40"
@@ -20,9 +20,9 @@ import Card from "./Card.astro";
       <li>Service</li>
     </ul>
 
-    <div class="hidden md:flex space-x-4">
+    <div class="hidden md:flex space-x-4 justify-center items-center">
       <span>Log In</span>
-      <Button>Sign Up</Button>
+      <Button intent="secondary">Sign Up</Button>
     </div>
 
     <div

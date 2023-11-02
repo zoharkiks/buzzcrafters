@@ -11,7 +11,7 @@ export default {
         "surface-secondary": "#FEFEFC",
         "surface-tertiary": "#F7F7F7",
         "accent-primary": "#FD6A13",
-        "accent-secondary": "#2F2F2D",
+        "accent-secondary": "#51514C",
         "text-primary": "#F5F0EA",
         "text-secondary": "#000000",
       },
