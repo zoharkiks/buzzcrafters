@@ -1,18 +1,165 @@
 ---
-import Button from '../components/Button.astro';
-import Navbar from '../components/Navbar.astro';
-import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+import Button from "../components/Button.astro";
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+
+import hero from "../assets/hero.png";
+import video1 from "../assets/video1.mp4";
+
+import Card from "../components/Card.astro";
+import CardAboutUs from "../components/CardAboutUs.astro";
 ---
 
 <Layout title="BuzzCrafters">
-	<main>
-		<section class="bg-surface-primary">
-			<Navbar/>
-		</section>
+  <main>
+    <header>
+      <section class="bg-surface-primary padding !pb-0 md:pb-6">
+        <Navbar />
+        <!-- Hero -->
 
-		<section>
-			Iam some other section
-		</section>
-	</main>
+        <div class="grid md:grid-cols-2 mt-20 md:mt-20">
+          <div class="text-text-primary flex flex-col">
+            <h1 class="text-5xl lg:text-7xl font-bold">
+              Be a great marketers for business grow
+            </h1>
+            <h2 class="mt-6">
+              The standard chunk of Lorom ipsum usod since the tho in the
+              reproducod below for those interested to interect Art of dosign to
+              the customer of the brand stotegy of the businoss grow
+            </h2>
+
+            <div class="flex space-x-4 mt-8">
+              <Button>Get Started</Button>
+              <Button intent="secondary">Watch Video</Button>
+            </div>
+          </div>
+
+          <div class="w-full h-[420px] lg:h-[540px] lg:pl-20">
+            <Image
+              src={hero}
+              alt="girl-holding-ipad"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- Features-->
+    <section
+      class="padding text-text-secondary grid mt-10 gap-y-10 lg:grid-cols-2 lg:gap-x-14"
+    >
+      <div class="space-y-6">
+        <h3 class="text-xl font-medium">Features</h3>
+        <h4 class="capitalize font-bold text-2xl w-3/4">
+          Get the best features by buzzcrafters
+        </h4>
+
+        <p class="font-medium text-accent-secondary">
+          The standard chunk of Lorem Ipium used since the the is the reproduced
+          below for those interested to Interect Art of design to the customar
+        </p>
+
+        <p class="font-medium text-accent-secondary">
+          The standard chunk of Lorem Ipium used since the the is the reproduced
+          below.
+        </p>
+
+        <Button intent="tertiary">Learn More</Button>
+      </div>
+
+      <div class="grid grid-cols-2 gap-9">
+        <Card
+          title="AI powered automation"
+          description=" The standard chunk of Lorem Ipium used since the the is the reproduced below"
+          icon="eos-icons:ai"
+        />
+
+        <Card
+          title="secuirty first"
+          description=" The standard chunk of Lorem Ipium used since the the is the reproduced below"
+          icon="mdi:security-lock-outline"
+        />
+
+        <Card
+          title="integration capabalities"
+          description=" The standard chunk of Lorem Ipium used since the the is the reproduced below"
+          icon="carbon:continuous-integration"
+        />
+
+        <Card
+          title="analytics and reporting"
+          description=" The standard chunk of Lorem Ipium used since the the is the reproduced below"
+          icon="bxs:chart"
+        />
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="padding grid gap-y-10 mt-20">
+      <div class="space-y-6">
+        <h3 class="text-xl font-medium">About Us</h3>
+        <div class="flex flex-col space-y-6 md:flex-row md:space-y-0">
+          <h4 class="capitalize font-bold text-2xl w-3/4">
+            grow your business faster than ever
+          </h4>
+          <p class="text-accent-secondary">
+            The standard chunk of torem Ipsum used since the the is the
+            reproduced belaw for those interested to interoct Art of design to
+            the customer.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <CardAboutUs
+          stats="890"
+          title="project completed"
+          description=" The standard chunk of torem Ipsum used since the the is the reproduced belaw for those interested to interoct Art of design to the customer"
+        />
+
+        <CardAboutUs
+          stats="715"
+          title="our happy clients"
+          description=" The standard chunk of torem Ipsum used since the the is the reproduced belaw for those interested to interoct Art of design to the customer"
+        />
+
+        <CardAboutUs
+          stats="150"
+          title="Awards Winner"
+          description=" The standard chunk of torem Ipsum used since the the is the reproduced belaw for those interested to interoct Art of design to the customer"
+        />
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section
+      class="padding bg-surface-primary text-text-primary grid gap-8 md:grid-cols-2"
+    >
+      <h5 class="text-3xl">
+        Our best of <span class="text-accent-primary"
+          >expert and professionals</span
+        > team helps to grow your business fast
+      </h5>
+
+      <div class="relative h-[300px] flex">
+        <div 
+          class="playBtn absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-accent-primary w-20 h-20 opacity-80 z-50 rounded-full flex justify-center items-center"
+        >
+          <iconify-icon
+            width="50"
+            icon="mingcute:play-fill"
+            class="group-hover:text-accent-primary transition-colors"
+          ></iconify-icon>
+        </div>
+        <video class="w-full h-full rounded-3xl object-cover grayscale">
+          <source src={video1} />
+        </video>
+      </div>
+    </section>
+    
+    <!-- FAQs -->
+    <section></section>
+  </main>
 </Layout>
-

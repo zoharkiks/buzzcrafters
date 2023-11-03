@@ -1,12 +1,18 @@
 ---
-const {imgSrc,imgAlt,title,description} = Astro.props
+const { title, description,icon } = Astro.props;
 ---
 
-<div class="rounded-lg overflow-hidden shadow-lg bg-white">
-    <img src={imgSrc} alt={imgAlt} class="w-full h-auto" />
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">{title}</div>
-      <p class="text-gray-700 text-base">{description}</p>
-    </div>
-   
-  </div>
+<div class="rounded-lg group transition-all hover:bg-black  bg-surface-tertiary flex flex-col p-4 space-y-3 ">
+  <iconify-icon
+    width="50"
+    icon={icon}
+    class="group-hover:text-accent-primary transition-colors"></iconify-icon>
+
+  <span class="font-semibold capitalize group-hover:text-text-primary">
+    {title}
+
+  </span>
+  <p class="text-accent-secondary group-hover:text-text-primary ">
+    {description}
+  </p>
+</div>
